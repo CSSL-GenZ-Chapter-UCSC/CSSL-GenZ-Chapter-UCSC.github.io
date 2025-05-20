@@ -4,7 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSSL - Center for Study of Science and Literature</title>
-    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .imgWrapper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 100%;
+        height: 350px;
+      }
+      .imgFill {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .flexCol {
+        padding: 0 60px;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        z-index: 20;
+      }
+      .flexRow {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: row;
+      }
+      .flexCol > h2 {
+        color: white;
+      }
+      .flexCol > a {
+        margin-top: auto;
+      }
+      .flexRow > p {
+        color: white;
+      }
+    </style>
+    <link rel="stylesheet" href="../../style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -44,7 +83,7 @@
                 <a href="#">EVENTS <i class="fas fa-chevron-down"></i></a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a href="./pages/events/upComingEvents.html"
+                    <a href="./pages/events/upcomingEvents/upcomingEvents.html"
                       >Upcoming Events</a
                     >
                   </li>
@@ -86,110 +125,22 @@
       </div>
     </header>
 
-    <section class="hero">
-      <div class="hero-overlay"></div>
-      <div class="container">
-        <div class="hero-content">
-          <p class="hero-subtitle">Empowering Future Technologists</p>
-          <h1 class="hero-title">
-            CSSL Gen<span class="accent-letter">Z</span> Chapter
-          </h1>
-          <p class="hero-description">of UCSC</p>
-          <a href="#" class="hero-btn"
-            >Discover More <i class="fas fa-arrow-right"></i
-          ></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section">
-      <div class="container">
-        <div class="about-content">
-          <div class="about-image">
-            <img
-              src="assets/cssl_wall.png"
-              alt="CSSL Logo Wall"
-              class="cssl-wall"
-            />
-          </div>
-          <div class="about-text">
-            <h3 class="section-subtitle">ABOUT THE CHAPTER</h3>
-            <h2 class="section-title">Transforming bytes into brilliance</h2>
-            <p class="section-description">
-              Established in 2021 by the Faculty of Computing, we take immense
-              pride in being the first-ever Student Chapter of the Computer
-              Society of Sri Lanka, paving the way for a new era of IT
-              professionalism and development among our undergraduates. Our
-              chapter is a dynamic platform for aspiring IT professionals,
-              providing unparalleled personal and professional growth
-              opportunities. With a commitment to fostering knowledge, skills,
-              and industry connections, the CSSL GenZ Chapter of KDU has become
-              a catalyst for excellence in information technology.
-            </p>
-            <a href="#" class="about-btn"
-              >Explore More <i class="fas fa-arrow-right"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-      <div class="wave-bg"></div>
-    </section>
-
     <section class="testimonials-section">
       <div class="container">
-        <h3 class="section-subtitle">TESTIMONIALS</h3>
-        <h2 class="section-title">What they say about us</h2>
-
-        <div class="testimonials-container">
-          <div class="testimonial-card">
-            <div class="testimonial-image">
-              <img src="assets/ajantha.png" alt="Dr. Ajantha Athukorala" />
+        <h3 class="section-subtitle">UPCOMING</h3>
+        <h2 class="section-title">Event timeline</h2>
+        <div class="imgWrapper">
+          <img class="imgFill" src="../../assets/eventsSplash.png" />
+          <div class="flexCol">
+            <h2>TechDrive 2.0</h2>
+            <div class="flexRow">
+              <img
+                src="../../assets/calender.png"
+                style="width: 20px; margin: 0 8px"
+              />
+              <p>19 Wed, March</p>
             </div>
-            <div class="testimonial-quote">
-              <i class="fas fa-quote-right"></i>
-              <p>
-                I commend their efforts in bridging academia with industry,
-                fostering a dynamic ecosystem for IT excellence
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <h4>Dr. Ajantha Athukorala</h4>
-              <p>Director, UCSC</p>
-            </div>
-          </div>
-
-          <div class="testimonial-card middle-card">
-            <div class="testimonial-image">
-              <img src="assets/nirosha.png" alt="Dr. Nirosha Wedasinghe" />
-            </div>
-            <div class="testimonial-quote">
-              <i class="fas fa-quote-right"></i>
-              <p>
-                A shining example of student leadership and collaborative spirit
-                - I wholeheartedly endorse them for a brighter of Sri Lankan IT.
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <h4>Dr. Nirosha Wedasinghe</h4>
-              <p>Chapter Patron, CSSL GenZ UCSC</p>
-            </div>
-          </div>
-
-          <div class="testimonial-card">
-            <div class="testimonial-image">
-              <img src="assets/asela.png" alt="Dr. Asela Gunasekara" />
-            </div>
-            <div class="testimonial-quote">
-              <i class="fas fa-quote-right"></i>
-              <p>
-                Impressed by their commitment to IT professionalism and
-                fostering a supportive community.
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <h4>Dr. Asela Gunasekara</h4>
-              <p>Dean, Faculty of Science</p>
-            </div>
+            <a href="#" class="about-btn">Register</a>
           </div>
         </div>
       </div>

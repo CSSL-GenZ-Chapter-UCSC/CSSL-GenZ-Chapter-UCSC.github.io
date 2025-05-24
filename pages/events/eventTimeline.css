@@ -1,0 +1,81 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#headerSection {
+    height: 42.9vh;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+#topic {
+    height: 14.3vh;
+    width: 80%;
+    background-color: antiquewhite;
+    margin: 6vh auto 2.7vh auto;
+}
+
+
+#upcoming {
+    height: 22%;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+
+#verticalLine {
+    height: 100%;
+    width: 3px;
+    background-color: #004CE5;
+}
+
+#upcoming p {
+    color: #004CE5;
+    padding: 10px;
+}
+
+#eventTimeline {
+    height: 49%;
+    width: 100%;
+    background-color: lightblue;
+    margin-top: 2vh;
+}
+
+#imagedPart {
+    width: 100%;
+    height: 42vh;
+    background-color: blueviolet;
+}
+
+#mainContent {
+    height: 105.5vh;
+    width: 100%;
+    background-color: aquamarine;
+}
+
+#pastEvents {
+    height: 80vh;
+    width: 100%;
+    background-color: tomato;
+}
+
+#subscription {
+    height: 31.8vh;
+    width: 100%;
+    background-color: lightcoral;
+}
+
+#footerSection {
+    height: 45.7vh;
+    width: 100%;
+    background-color: lightseagreen;
+}
+
+#deadSpace {
+    height: 5vh;
+    width: 100%;
+    background-color: white;
+}

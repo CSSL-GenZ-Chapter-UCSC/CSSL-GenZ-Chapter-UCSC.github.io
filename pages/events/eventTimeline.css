@@ -40,8 +40,15 @@ html, body {
 #eventTimeline {
     height: 49%;
     width: 100%;
-    background-color: lightblue;
     margin-top: 2vh;
+    position: relative;
+}
+
+#eventTimeline p {
+    font-size: 3em;
+    position: absolute;
+    top: -8vh;
+    font-weight: 700;
 }
 
 #imagedPart {

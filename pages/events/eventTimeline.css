@@ -13,7 +13,6 @@ html, body {
 #topic {
     height: 14.3vh;
     width: 80%;
-    background-color: antiquewhite;
     margin: 6vh auto 2.7vh auto;
 }
 
@@ -53,8 +52,14 @@ html, body {
 
 #imagedPart {
     width: 100%;
-    height: 42vh;
+    height: 57vh;
     background-color: blueviolet;
+}
+
+#imagedPart img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 #mainContent {

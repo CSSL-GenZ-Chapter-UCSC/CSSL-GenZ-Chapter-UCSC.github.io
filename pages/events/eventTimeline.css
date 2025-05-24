@@ -52,14 +52,67 @@ html, body {
 
 #imagedPart {
     width: 100%;
-    height: 57vh;
+    height: 47vh;
     background-color: blueviolet;
+    position: relative;
 }
 
 #imagedPart img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
+}
+
+#contextOfImagedPart {
+    height: 50%;
+    width: 80%;
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    margin-left: 10%;
+}
+
+#textOfImagedPart {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    color: white;
+}
+
+#calenderWrapper {
+    width: 25px;
+    height: 25px;
+}
+
+#eventDate {
+    margin-left: 10px;
+}
+
+#techdrive {
+    color: white;
+    font-size: 2em;
+    top: -30px;
+    position: absolute;
+}
+
+
+#buttonOfImagedPart {
+    height: 30%;
+    padding: 10px;
+}
+
+#register {
+    width: 110px;
+    height: 38px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: medium;
+    color: white;
+    background-color: #004CE5;
+    border: none;
+    cursor: pointer;
 }
 
 #mainContent {

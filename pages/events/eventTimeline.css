@@ -116,15 +116,42 @@ html, body {
 }
 
 #mainContent {
-    height: 105vh;
+    height: 110vh;
     width: 100%;
     background-color: aquamarine;
     position: relative;
 }
 
+.main-content-div {
+    width: 80%;
+    height: 30vh;
+    margin: 0 auto;
+    background-color: #f0f4fa;
+}
+
+#mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content-div-1 {
+    margin-top: calc(6vh + 15px);
+}
+
+.main-content-div-2 {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.main-content-div-3{
+    margin-bottom: 15px;
+}
+
+
 #shapesContainer {
     width: 100%;
-    height: 95vh;
+    height: 100vh;
     position: absolute;
     top: 5vh;
     display: flex;
@@ -147,7 +174,7 @@ html, body {
 }
 
 #verticalLine2 {
-    height: 95vh;
+    height: 100vh;
     width: 3px;
     background-color: rgba(0, 76, 229, 0.65);
 }

@@ -116,9 +116,40 @@ html, body {
 }
 
 #mainContent {
-    height: 105.5vh;
+    height: 105vh;
     width: 100%;
     background-color: aquamarine;
+    position: relative;
+}
+
+#shapesContainer {
+    width: 100%;
+    height: 95vh;
+    position: absolute;
+    top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#circle2 {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba(0, 76, 229, 0.65);
+}
+
+#circle1 {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgba(0, 76, 229, 0.65);
+}
+
+#verticalLine2 {
+    height: 95vh;
+    width: 3px;
+    background-color: rgba(0, 76, 229, 0.65);
 }
 
 #pastEvents {

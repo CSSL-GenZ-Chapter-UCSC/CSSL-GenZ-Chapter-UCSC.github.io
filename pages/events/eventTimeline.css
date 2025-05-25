@@ -336,20 +336,46 @@ html, body {
     background-color: violet;
     display: flex;
     align-items: center;
+    font-size: 2em;
+    margin-left: 5%;
 }
 
 .pastEvents-card-date {
+    margin-left: 5%;
     width: 100%;
     height: 40%;
     background-color: rgb(49, 0, 49);
     display: flex;
     align-items: center;
+    font-size: 1.2em;
+    color: #004CE5;
+}
+
+.pastEvents-card-date img {
+    border: none;
+    margin-right: 5%;
 }
 
 .pastEvents-card-viewMore {
     width: 100%;
     height: 10%;
     background-color: yellowgreen;
+}
+
+.viewMoreBtn {
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #004CE5;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
 }
 
 #subscription {

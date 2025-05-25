@@ -127,6 +127,7 @@ html, body {
     height: 30vh;
     margin: 0 auto;
     background-color: #f0f4fa;
+    display: flex;
 }
 
 #mainContent {
@@ -148,6 +149,28 @@ html, body {
     margin-bottom: 15px;
 }
 
+.detailsArea {
+    width: 42.5%;
+    height: 100%;
+    background-color: black;
+}
+
+.logoCircle {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    margin-left: calc(3.5vw - 1.5px);
+    margin-right: 3vw;
+    background-color: red;
+    z-index: 2;
+    border-width: 0px;
+}
+
+.pastDate {
+    width: 42.5%;
+    height: 5vw;
+    background-color: #004CE5;
+}
 
 #shapesContainer {
     width: 100%;

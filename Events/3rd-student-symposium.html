@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSSL - Center for Study of Science and Literature</title>
+
+        <style>
+                     
+
+            /* Base styles from your original CSS */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Inter", sans-serif;
+                line-height: 1.6;
+                overflow-x: auto;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 15px;
+            }
+
+            /* Navbar Styles */
+            .navbar {
+                background-color: white;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+
+            .navbar-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 0;
+            }
+
+            .logo img {
+                height: 40px;
+                width: auto;
+            }
+
+            .nav-menu {
+                flex-grow: 1;
+                margin: 0 20px;
+            }
+
+            .nav-links {
+                display: flex;
+                list-style: none;
+                justify-content: center;
+            }
+
+            .nav-links li {
+                position: relative;
+                margin: 0 15px;
+            }
+
+            .nav-links a {
+                color: #333;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 14px;
+                padding: 10px 0;
+                display: block;
+                transition: color 0.3s ease;
+            }
+
+            .nav-links a:hover,
+            .nav-links a.active {
+                color: #3b5aab;
+            }
+
+            .nav-links a.active {
+                border-bottom: 2px solid #3b5aab;
+            }
+
+            .dropdown-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: white;
+                min-width: 180px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(10px);
+                transition: all 0.3s ease;
+                z-index: 1;
+                border-radius: 4px;
+                padding: 10px 0;
+                list-style-type: none;
+            }
+
+            .dropdown:hover .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .dropdown-menu li {
+                margin: 0;
+            }
+
+            .dropdown-menu a {
+                padding: 8px 15px;
+                font-size: 13px;
+            }
+
+            .dropdown-menu a:hover {
+                background-color: #f5f5f5;
+            }
+
+            
+
+            .fa-chevron-down {
+                font-size: 10px;
+                margin-left: 5px;
+            }
+
+            /* Social Icons */
+            .social-icons {
+                display: flex;
+                align-items: center;
+            }
+
+            .social-icons a {
+                color: #3b5aab;
+                margin-left: 15px;
+                font-size: 18px;
+                transition: color 0.3s ease, transform 0.2s ease;
+            }
+
+            .social-icons a:hover {
+                color: #1e3a8a;
+                transform: translateY(-2px);
+            }
+
+            /* Mobile Toggle Button */
+            .mobile-toggle {
+                display: none;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30px;
+                height: 21px;
+                cursor: pointer;
+            }
+
+            .mobile-toggle .bar {
+                height: 3px;
+                width: 100%;
+                background-color: #3b5aab;
+                border-radius: 10px;
+                transition: all 0.3s ease;
+            }
+
+            /* Symposium Section */
+            #symposium {
+                font-size: 0.99em;
+                max-width: 1256px;
+                max-height: 338px;
+                background-color: #004CE5;
+                margin: 0 auto;
+                padding: 2em 1em;
+                box-sizing: border-box;
+                height: auto;
+                /*border: 5px solid rgb(74, 6, 83);*/
+            }
+
+            #symposium h1 {
+                position: relative;
+                top: -70px;
+                font-family: 'Inter', sans-serif;
+                font-size: 2.9em;
+                font-weight: 700;
+                max-width: 549px;
+                max-height: auto;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 118px;
+                padding: 0px;
+                color: white;
+                text-align: center;
+                /*border: 3px solid rgb(63, 237, 10);*/
+            }
+
+            #symposium p {
+                position: relative;
+                top: -70px;
+                text-align: center;
+                font-family: 'Inter', sans-serif;
+                font-size: 1.18em;
+                letter-spacing: 1px;
+                word-spacing: 6px;
+                max-width: 800px;
+                height: 60px;
+                margin: 0 auto;
+                color: white;
+                /*border: 2px solid red;*/
+            }
+
+            /* Paragraph Section */
+            .paragraph {
+                max-width: 1256px;
+                margin: 0 auto;
+                padding: 70px 20px;
+                /*border: 1px solid red;*/
+            }
+
+            .horizontal-flex {
+                display: inline-block;
+                margin-left: 30px;
+                padding: 15.7px;
+                padding-bottom: 1px;
+            }
+
+            #line {
+                position: relative;
+                left: -70px;
+                display: inline-block;
+                width: 7px;
+                height: 32px;
+                margin-right: 10px;
+                background-color: #004CE5;
+            }
+
+            .horizontal-flex h2 {
+                display: inline;
+                font-family: 'Inter', sans-serif;
+                font-size: 1.36em;
+                font-weight: 500;
+                position: relative;
+                top: 1px;
+                left: -68px;
+                color: #004CE5;
+            }
+
+            #heading-with-icons {
+                padding: 5px;
+                margin-left: -28px;
+                /*border: 3px solid purple;*/
+            }
+
+            #heading-with-icons h1 {
+                display: inline;
+                font-size: 3em;
+                font-weight: 700;
+                letter-spacing: 0px;
+                word-spacing: 5px;
+            }
+
+            .icon-text {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                margin-left: 4.8px;
+                flex-wrap: wrap;
+                /*border: 1px solid red;*/
+            }
+
+            .icon-text img {
+                height: 21.9px;
+                width: auto;
+                display: block;
+                filter: brightness(0) saturate(100%) invert(24%) sepia(94%) saturate(7483%) hue-rotate(222deg) brightness(91%) contrast(102%);
+            }
+
+            .icon-text span {
+                font-size: 1.03em;
+                font-family: 'Inter', sans-serif;
+                margin-left: -13px;
+                margin-right: 5px;
+                line-height: 1;
+                color: #004CE5;
+            }
+
+            #para-lines {
+                padding: 7px;
+                margin-left: -25px;
+            }
+
+            #para-lines p {
+                font-family: 'Inter', sans-serif;
+                font-size: 20px;
+                font-weight: 400;
+                margin-bottom: 30px;
+                line-height: 1.6;
+            }
+
+            #para-lines p:nth-child(1) {
+                font-size: 1.15em;
+            }
+
+            #para-lines p:nth-child(2) {
+                font-size: 1.23em;
+            }
+
+            #para-lines p:nth-child(3) {
+                font-size: 1.227em;
+            }
+
+            /* Images Section */
+            #images-section {
+                max-width: 1256px;
+                margin: 0 auto;
+                padding: 33.5px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: auto auto;
+                gap: 20px;
+                align-items: start;
+            }
+
+            #hack {
+                position: relative;
+                left: 38px;
+                grid-column: 1 / 3;
+                grid-row: 1 / 3;
+                width: 550px;
+                height: 395px;
+                border-radius: 12px;
+            }
+
+            #img1, #img2, #img3, #img4 {
+                width: 100%;
+                height: 188px;
+                object-fit: cover;
+                border-radius: 12px;
+            }
+
+            .view-btn{
+                background-color: #004ce5;
+                color: white;
+                border: none;
+                padding: 12px 53px;
+                margin-left: 40px;
+                border-radius: 50px;
+                font-family: "Inter", sans-serif;
+                font-weight: 500;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+            }
+
+            .view-btn:hover{
+                background-color: #003bb2;
+                transform: translateY(-2px);
+            }
+
+            .rectangle span {
+                font-size: 1.18em;
+                color: white;
+            }
+
+            /* Footer */
+            .footer {
+                background-color: #f9fbff;
+                padding-top: 70px;
+                border-top: 1px solid #eaeef5;
+            }
+
+            .footer-content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 40px;
+                padding-bottom: 50px;
+            }
+
+            .footer-brand {
+                flex: 1;
+                min-width: 250px;
+                max-width: 350px;
+            }
+
+            .footer-logo {
+                width: 180px;
+                margin-bottom: 20px;
+            }
+
+            .footer-tagline {
+                color: #3b5aab;
+                font-weight: 600;
+                margin-bottom: 25px;
+                line-height: 1.5;
+            }
+
+            .footer-social p {
+                color: #555;
+                margin-bottom: 10px;
+            }
+
+            .social-links {
+                display: flex;
+                gap: 15px;
+            }
+
+            .social-links a {
+                color: #3b5aab;
+                font-size: 18px;
+                transition: color 0.3s ease, transform 0.2s ease;
+            }
+
+            .social-links a:hover {
+                color: #004ce5;
+                transform: translateY(-2px);
+            }
+
+            .footer-links {
+                flex: 1;
+                min-width: 200px;
+            }
+
+            .footer-links h3,
+            .footer-newsletter h3 {
+                color: #222;
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin-bottom: 25px;
+                position: relative;
+            }
+
+            .footer-links h3::after,
+            .footer-newsletter h3::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+                width: 40px;
+                height: 3px;
+                background-color: #004ce5;
+            }
+
+            .footer-links ul {
+                list-style: none;
+            }
+
+            .footer-links li {
+                margin-bottom: 15px;
+            }
+
+            .footer-links a {
+                color: #555;
+                text-decoration: none;
+                transition: color 0.3s ease, padding-left 0.3s ease;
+                display: inline-block;
+            }
+
+            .footer-links a:hover {
+                color: #004ce5;
+                padding-left: 5px;
+            }
+
+            .footer-newsletter {
+                flex: 1.5;
+                min-width: 300px;
+            }
+
+            .footer-newsletter p {
+                color: #555;
+                margin-bottom: 20px;
+                line-height: 1.6;
+            }
+
+            .newsletter-form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .newsletter-form input {
+                padding: 12px 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-family: "Inter", sans-serif;
+                font-size: 0.95rem;
+                outline: none;
+                transition: border-color 0.3s ease;
+            }
+
+            .newsletter-form input:focus {
+                border-color: #004ce5;
+            }
+
+            .subscribe-btn {
+                background-color: #004ce5;
+                color: white;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 50px;
+                font-family: "Inter", sans-serif;
+                font-weight: 500;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.2s ease;
+            }
+
+            .subscribe-btn:hover {
+                background-color: #003bb2;
+                transform: translateY(-2px);
+            }
+
+            .footer-bottom {
+                background-color: #f0f5ff;
+                padding: 20px 0;
+                text-align: center;
+                color: #555;
+                font-size: 0.9rem;
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .zoom-controls {
+                    right: 10px;
+                    transform: translateY(-50%) scale(0.9);
+                }
+
+                .zoom-btn {
+                    width: 35px;
+                    height: 35px;
+                    font-size: 16px;
+                }
+
+                #symposium h1 {
+                    font-size: 2rem;
+                    margin-top: 50px;
+                }
+
+                #symposium p {
+                    font-size: 1rem;
+                }
+
+                #heading-with-icons h1 {
+                    font-size: 2rem;
+                }
+
+                #images-section {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto auto auto;
+                }
+
+                #hack {
+                    grid-column: 1 / 3;
+                    grid-row: 1;
+                }
+
+                .navbar-content {
+                    flex-wrap: wrap;
+                }
+
+                .mobile-toggle {
+                    display: flex;
+                }
+
+                .nav-menu {
+                    order: 4;
+                    flex-basis: 100%;
+                    margin: 0;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.5s ease;
+                }
+
+                .nav-menu.active {
+                    max-height: 1000px;
+                    margin-top: 15px;
+                }
+
+                .nav-links {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .nav-links li {
+                    margin: 0;
+                    width: 100%;
+                    border-bottom: 1px solid #eee;
+                }
+
+                .nav-links a {
+                    padding: 12px 0;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .zoom-controls {
+                    right: 5px;
+                    transform: translateY(-50%) scale(0.8);
+                }
+
+                .zoom-btn {
+                    width: 30px;
+                    height: 30px;
+                    font-size: 14px;
+                }
+
+                .zoom-level {
+                    font-size: 10px;
+                }
+            }
+
+
+.paragraph {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 4% 2%;
+    height: auto;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+/* Zoom functionality */
+.paragraph.zoom-small { transform: scale(0.8); }
+.paragraph.zoom-normal { transform: scale(1); }
+.paragraph.zoom-large { transform: scale(1.2); }
+.paragraph.zoom-xlarge { transform: scale(1.5); }
+
+.horizontal-flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+}
+
+#line {
+    width: 7px;
+    height: 32px;
+    margin-right: 15px;
+    background-color: #004CE5;
+    flex-shrink: 0;
+}
+
+.horizontal-flex h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    font-weight: 500;
+    color: #004CE5;
+    margin: 0;
+}
+
+#heading-with-icons {
+    margin-bottom: 2rem;
+}
+
+#heading-with-icons h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    word-spacing: 5px;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    margin-top: 1rem;
+}
+
+.icon-text img {
+    height: 22px;
+    width: auto;
+    filter: brightness(0) saturate(100%) invert(24%) sepia(94%) saturate(7483%) hue-rotate(222deg) brightness(91%) contrast(102%);
+}
+
+.icon-text span {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-family: 'Inter', sans-serif;
+    color: #004CE5;
+    white-space: nowrap;
+}
+
+#para-lines {
+    margin-top: 2rem;
+    /*border: 1px solid rgb(11, 250, 27);*/
+}
+
+#para-lines p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    /*border: 1px solid blue;*/
+}
+
+#para-lines p:last-child {
+    margin-bottom: 0;
+}
+
+/* Media Queries for Fine-tuning */
+@media (max-width: 768px) {
+    .paragraph {
+        width: 95%;
+        padding: 3% 1%;
+    }
+    
+    .horizontal-flex {
+        margin-bottom: 1.5rem;
+    }
+    
+    .icon-text {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .icon-text > div {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    #heading-with-icons h1 {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .paragraph {
+        width: 100%;
+        padding: 2% 1%;
+    }
+    
+    #line {
+        height: 24px;
+        margin-right: 10px;
+    }
+}
+
+/* Zoom Controls (optional) */
+.zoom-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.zoom-controls button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #004CE5;
+    background: white;
+    color: #004CE5;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.zoom-controls button:hover {
+    background: #004CE5;
+    color: white;
+}
+
+.zoom-controls button.active {
+    background: #004CE5;
+    color: white;
+}
+        </style>
+        
+        <link rel="stylesheet" href="csspage.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link 
+            rel="stylesheet"
+            href=""
+        >
+
+    </head>
+
+    <body>
+        <header class="navbar" style="border: 1px solid green;">
+            <div class="container">
+                <div class="navbar-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/logo.png" alt="CSSL Logo" />
+                        </a>
+                    </div>
+
+                    <nav class="nav-menu">
+                        <ul class="nav-links">
+                            <li><a href="#">HOME</a></li>
+                            <li class="dropdown">
+                                <a href="#"
+                                    >ABOUT US <i class="fas fa-chevron-down"></i
+                                ></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Our Mission</a></li>
+                                    <li><a href="#">Our Team</a></li>
+                                    <li><a href="#">History</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">WHAT WE DO</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="active"
+                                    >EVENTS <i class="fas fa-chevron-down"></i
+                                ></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Upcoming Events</a></li>
+                                    <li><a href="#">Past Events</a></li>
+                                    <li><a href="#">Workshops</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#"
+                                    >PEOPLE <i class="fas fa-chevron-down"></i
+                                ></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Leadership</a></li>
+                                    <li><a href="#">Faculty</a></li>
+                                    <li><a href="#">Staff</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">CONTACT US</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="social-icons">
+                        <a href="#" aria-label="Email"
+                            ><i class="fas fa-envelope"></i
+                        ></a>
+                        <a href="#" aria-label="Instagram"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                        <a href="#" aria-label="Facebook"
+                            ><i class="fab fa-facebook-f"></i
+                        ></a>
+                        <a href="#" aria-label="LinkedIn"
+                            ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                    </div>
+
+                    <div class="mobile-toggle">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+      
+        <main>
+    
+            <section>                                                                           
+                <div id="symposium">
+                    <h1>3rd Student Symposium</h1>                                                  <!--for first section symposium-->
+                    <p>The 3rd Student Symposium of University of Colombo School of Computing</p>
+                </div>
+            </section>
+        
+
+            <section>
+                <div class="paragraph">
+                    <div class="horizontal-flex"> <!--This div is for vertical bar + h2 tag 3RD STUDENT SYMPOSIUM-->
+                        <div id="line"></div>             <!--for second section vertical line-->
+                        <h2>3RD STUDENT SYMPOSIUM</h2>
+                    </div>
+                    <div id="heading-with-icons">  <!--This div is for 3RD STUDENT SYMPOSIUM OF UCSC + that map icons stuff-->
+                        <h1>The 3rd Student Symposium of UCSC</h1>   
+                        <div class="icon-text">
+                                    <img src="images/calender.png" alt="calendar" />
+                                    <span>19 Wed, March</span>
+
+                                    <img src="images/clock.png" alt="clock" />
+                                    <span>10:00-15:00</span>
+
+                                    <img src="images/maps.png" alt="map" />
+                                    <span>S104, UCSC</span>
+                        </div>   <!--for icon-text div end-->
+                    </div> <!--for heading-with-icons div end-->
+                    <div id="para-lines">
+                                <p>
+                                    The 3rd Student Symposium of the Faculty of Computing at General Sir John Kotelawala Defence University (KDU), held on 
+                                    January 18, 2023, stood as a testament to the fusion of academic prowess, technological innovation, and a steadfast 
+                                    commitment to sustainable development. Under the theme "Science, Technology, and Innovations for Sustainable 
+                                    Development," the symposium unfolded into a dynamic arena where students, faculty, and industry professionals 
+                                    converged to explore the forefront of computing. The distinguished presence of Major General MP Peiris, the Vice 
+                                    Chancellor of KDU, as the Chief Guest added a layer of prestige to the occasion. Keynote speeches by Dr Ajantha 
+                                    Athukorale, Director of University of Colombo School of Computing and President of the Computer Society of Sri Lanka 
+                                    (CSSL), and Prof Eun Chang Choi, AI Policy Adviser to the Government of Korea, enriched the symposium with global 
+                                    perspectives and insights into the latest advancements in computing.
+                                </p>
+
+                                <p>
+                                    Integral to the symposium's success was the unwavering commitment of the organizing committee, led by the Students of 
+                                    CSSL GenZ Chapter of KDU. Their dedication and meticulous planning were evident in the seamless execution of the event, 
+                                    showcasing their leadership skills and passion for fostering a collaborative platform for academic discourse. Beyond the 
+                                    students, the symposium also benefited from the robust support of lecturers who actively participated in reviewing papers 
+                                    and serving on judge panels. Their involvement underscored the symbiotic relationship between students and faculty, 
+                                    showcasing the collaborative spirit that drives academic excellence within the computing department at KDU.
+                                </p>
+
+                                <p>
+                                    The symposium featured 67 carefully selected abstracts, covering diverse areas within the main domains of Computing. 
+                                    The lecturers' involvement extended to the judging process, adding an extra layer of expertise and ensuring the academic 
+                                    rigor of the presented research. This collaboration between students and faculty not only elevated the quality of the 
+                                    symposium but also provided students with invaluable mentorship and guidance. In conclusion, the 3rd Student 
+                                    Symposium of the Faculty of Computing at KDU was a holistic experience that blended the passion of students, the 
+                                    expertise of faculty members, and the insights of industry professionals. It showcased the power of collaboration, 
+                                    innovation, and the pivotal role both students and lecturers play in shaping the future of science, technology, and 
+                                    sustainable development. This symposium, organized by the CSSL GenZ Chapter of KDU, not only celebrated the <br>
+                                    achievements of the present but laid a foundation for the transformative journey ahead.
+                                </p>
+                    </div> <!--for para div end-->
+                </div>  <!--for paragraph div end-->
+            </section>
+
+
+            <section>
+                <div id="images-section">   <!--for images + view Album button div tag begin-->
+                    <img id="hack" class="interactive-image" src="images/hackothon.png" alt="hackpthon">
+                    <img id="img1" class="interactive-image" src="images/image1.png" alt="image1">
+                    <img id="img2" class="interactive-image" src="images/image2.png" alt="image2">    <!--for images of events-->
+                    <img id="img3" class="interactive-image" src="images/image3.png" alt="image3">
+                    <img id="img4" class="interactive-image" src="images/image4.png" alt="image4">
+                
+                    <a href="#">
+                        
+                        <button class="view-btn">View Album</button>
+                            <!--for view album button-->
+                        
+                    </a>
+                </div>        <!--for images + view Album button div tag end-->
+            </section>
+
+        </main>
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <img
+                            src="images/logo.png"
+                            alt="CSSL Logo"
+                            class="footer-logo"
+                        />
+                        <p class="footer-tagline">
+                            We are the National Association for IT Professionals
+                            in Sri Lanka
+                        </p>
+                        <div class="footer-social">
+                            <p>Follow us on:</p>
+                            <div class="social-links">
+                                <a href="#" aria-label="Email"
+                                    ><i class="fas fa-envelope"></i
+                                ></a>
+                                <a href="#" aria-label="Instagram"
+                                    ><i class="fab fa-instagram"></i
+                                ></a>
+                                <a href="#" aria-label="Facebook"
+                                    ><i class="fab fa-facebook-f"></i
+                                ></a>
+                                <a href="#" aria-label="LinkedIn"
+                                    ><i class="fab fa-linkedin-in"></i
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-links">
+                        <h3>USEFUL LINKS</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Accreditation</a></li>
+                            <li><a href="#">Membership</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-newsletter">
+                        <h3>NEWSLETTER</h3>
+                        <p>
+                            Subscribe to our newsletter to receive latest
+                            updates from CSSL!
+                        </p>
+                        <form class="newsletter-form">
+                            <input
+                                type="text"
+                                placeholder="Enter your name"
+                                required
+                            />
+                            <input
+                                type="email"
+                                placeholder="Enter your email address"
+                                required
+                            />
+                            <button type="submit" class="subscribe-btn">
+                                Subscribe Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>© 2025 CSSL GenZ Chapter UCSC</p>
+                </div>
+            </div>   
+        </footer>
+
+
+        <script>
+            let images = document.getElementsByClassName("interactive-image");
+            
+            for (let i = 0; i < images.length; i++) {
+                images[i].addEventListener("mouseover", function () {
+                    images[i].style.border = "4px solid blue"; // or any style you want
+                    images[i].style.borderRadius = "15px"; // makes the border curve
+                });
+
+                images[i].addEventListener("mouseout", function () {
+                    images[i].style.border = "none"; // remove border when mouse leaves
+                });
+            }
+        </script>
+    </body>
+</html>

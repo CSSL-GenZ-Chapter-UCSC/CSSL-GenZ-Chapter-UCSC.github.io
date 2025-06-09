@@ -20,6 +20,8 @@ html, body {
     height: 14.3vh;
     width: 80%;
     margin: 6vh auto 2.7vh auto;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -45,8 +47,8 @@ html, body {
 #eventTimeline {
     height: 49%;
     width: 100%;
-    margin-top: 2vh;
     position: relative;
+    bottom: -6vh;
 }
 
 #eventTimeline p {
@@ -427,4 +429,124 @@ html, body {
     height: 5vh;
     width: 100%;
     background-color: white;
+}
+
+/* Tablets (max-width: 900px) */
+@media (max-width: 900px) {
+    .detailsTopic {
+        font-size: 1.1em;
+        padding: 6px;
+    }
+    .detailsDescription {
+        font-size: 0.98em;
+        padding: 0 6px;
+    }
+    .viewMore {
+        font-size: 0.98em;
+        padding: 4px 6px;
+        width: auto;
+    }
+    #pastEvents{
+        height: auto;
+    }
+    .pastEvents-header {
+        width: 90%;
+        margin-right: 0;
+        align-self: center;
+        font-size: 1em;
+    }
+    .pastEvents-cards {
+        flex-direction: row;      
+        flex-wrap: wrap;          
+        align-items: stretch;
+        justify-content: center;
+        gap: 4vw;
+        height: auto;
+        margin-bottom: 3vh;
+    }
+    .pastEvents-card {
+        width: 45%;               /* Two cards per row */
+        min-width: 260px;         
+        min-height: 30vh;
+        margin-bottom: 3vh;
+    }
+    .pastEvents-card-topic {
+        font-size: 1.2em;
+    }
+    .pastEvents-card-date {
+        font-size: 1em;
+    }
+    .viewMoreBtn {
+        width: 80%;
+        font-size: 1em;
+    }
+}
+
+/* Phones (max-width: 600px) */
+@media (max-width: 600px) {
+    #mainContent {
+        width: 100%;
+        height: auto;
+    }
+    .main-content-div {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        margin: 0 0 2vh 0;
+        height: auto;
+    }
+    .detailsArea, .pastDate {
+        width: 100%;
+        height: auto;
+        font-size: 0.95em;
+    }
+    .logoCircle {
+        width: 18vw;
+        height: 18vw;
+        margin: 3vw auto;
+    }
+    .detailsTopic {
+        font-size: 1.1em;
+        padding: 6px;
+    }
+    .detailsDescription {
+        font-size: 0.98em;
+        padding: 0 6px;
+    }
+    .viewMore {
+        font-size: 0.98em;
+        padding: 4px 6px;
+        width: auto;
+    }
+    .pastEvents-header {
+        width: 90%;
+        margin-right: 0;
+        align-self: center;
+        font-size: 1em;
+    }
+    .pastEvents-cards {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 4vw;
+        height: auto;           /* container grows */
+        margin-bottom: 3vh;     
+    }
+    .pastEvents-card {
+        min-width: 0;
+        width: 95%;
+        min-height: 30vh;
+        margin-bottom: 3vh;
+    }
+    .pastEvents-card-topic {
+        font-size: 1.2em;
+    }
+    .pastEvents-card-date {
+        font-size: 1em;
+    }
+    .viewMoreBtn {
+        width: 80%;
+        font-size: 1em;
+    }
 }

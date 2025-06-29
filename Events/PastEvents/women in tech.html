@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Events/Past Events-CSSL - Center for Study of Science and Literature</title>
+
+       
+        
+        
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link 
+            rel="stylesheet"
+            href="women in tech.css"
+        >
+
+    </head>
+
+    <body>
+       
+
+        <main>
+    
+            <section>                                                                           
+                <div id="symposium">
+                    <h1>Women in tech</h1>                                                  
+                    <p>The Women in tech of University of Colombo School of Computing</p>
+                </div>
+            </section>
+        
+
+            <section>
+                <div class="paragraph">
+                    <div class="horizontal-flex"> 
+                        <div id="line"></div>             
+                        <h2>Women in tech</h2>
+                    </div>
+                    <div id="heading-with-icons">  
+                        <h1>The Women in tech of UCSC</h1>   
+                        <div class="icon-text">
+                                    <img src="../../assets/calender.png" alt="calendar" />
+                                    <span>19 Wed, March</span>
+
+                                    <img src="../../assets/clock.png" alt="clock" />
+                                    <span>10:00-15:00</span>
+
+                                    <img src="../../assets/maps.png" alt="map" />
+                                    <span>S104, UCSC</span>
+                        </div>   
+                    </div> 
+                    <div id="para-lines">
+                                <p>
+                                    The 3rd Student Symposium of the Faculty of Computing at General Sir John Kotelawala Defence University (KDU), held on 
+                                    January 18, 2023, stood as a testament to the fusion of academic prowess, technological innovation, and a steadfast 
+                                    commitment to sustainable development. Under the theme "Science, Technology, and Innovations for Sustainable 
+                                    Development," the symposium unfolded into a dynamic arena where students, faculty, and industry professionals 
+                                    converged to explore the forefront of computing. The distinguished presence of Major General MP Peiris, the Vice 
+                                    Chancellor of KDU, as the Chief Guest added a layer of prestige to the occasion. Keynote speeches by Dr Ajantha 
+                                    Athukorale, Director of University of Colombo School of Computing and President of the Computer Society of Sri Lanka 
+                                    (CSSL), and Prof Eun Chang Choi, AI Policy Adviser to the Government of Korea, enriched the symposium with global 
+                                    perspectives and insights into the latest advancements in computing.
+                                </p>
+
+                                <p>
+                                    Integral to the symposium's success was the unwavering commitment of the organizing committee, led by the Students of 
+                                    CSSL GenZ Chapter of KDU. Their dedication and meticulous planning were evident in the seamless execution of the event, 
+                                    showcasing their leadership skills and passion for fostering a collaborative platform for academic discourse. Beyond the 
+                                    students, the symposium also benefited from the robust support of lecturers who actively participated in reviewing papers 
+                                    and serving on judge panels. Their involvement underscored the symbiotic relationship between students and faculty, 
+                                    showcasing the collaborative spirit that drives academic excellence within the computing department at KDU.
+                                </p>
+
+                                <p>
+                                    The symposium featured 67 carefully selected abstracts, covering diverse areas within the main domains of Computing. 
+                                    The lecturers' involvement extended to the judging process, adding an extra layer of expertise and ensuring the academic 
+                                    rigor of the presented research. This collaboration between students and faculty not only elevated the quality of the 
+                                    symposium but also provided students with invaluable mentorship and guidance. In conclusion, the 3rd Student 
+                                    Symposium of the Faculty of Computing at KDU was a holistic experience that blended the passion of students, the 
+                                    expertise of faculty members, and the insights of industry professionals. It showcased the power of collaboration, 
+                                    innovation, and the pivotal role both students and lecturers play in shaping the future of science, technology, and 
+                                    sustainable development. This symposium, organized by the CSSL GenZ Chapter of KDU, not only celebrated the <br>
+                                    achievements of the present but laid a foundation for the transformative journey ahead.
+                                </p>
+                    </div> 
+                </div>  
+            </section>
+
+
+            <section>
+                <div id="images-section">   
+                    <img id="hack" class="interactive-image" src="../../assets/hackothon.png" alt="hackpthon">
+                    <img id="img1" class="interactive-image" src="../../assets/image1.png" alt="image1">
+                    <img id="img2" class="interactive-image" src="../../assets/image2.png" alt="image2">    
+                    <img id="img3" class="interactive-image" src="../../assets/image3.png" alt="image3">
+                    <img id="img4" class="interactive-image" src="../../assets/image4.png" alt="image4">
+                
+                    <a href="#">
+                        
+                        <button class="view-btn">View Album</button>
+                            
+                        
+                    </a>
+                </div>        
+            </section>
+
+        </main>
+
+
+
+        <script>
+            let images = document.getElementsByClassName("interactive-image");
+            
+            for (let i = 0; i < images.length; i++) {
+                images[i].addEventListener("mouseover", function () {
+                    images[i].style.border = "4px solid blue"; 
+                    images[i].style.borderRadius = "15px"; 
+                });
+
+                images[i].addEventListener("mouseout", function () {
+                    images[i].style.border = "none"; 
+                });
+            }
+        </script>
+    </body>
+</html>

@@ -67,6 +67,7 @@ body {
 .nav-links a:hover,
 .nav-links a.active {
   color: #3b5aab;
+  border-bottom: 2px solid #3b5aab;
 }
 
 .nav-links a.active {

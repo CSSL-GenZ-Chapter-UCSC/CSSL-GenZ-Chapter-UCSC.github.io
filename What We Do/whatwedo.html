@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSSL - What We Do</title>
+    <link rel="stylesheet" href="whatwedo.css" />
+    <link rel="stylesheet" href="/Navbar/navbar.css" />
+    <link rel="stylesheet" href="/Footer/footer.css" />
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+    <main>
+      <header class="hero-section">
+        <div class="hero-content">
+          <h1>What We Do</h1>
+          <p>
+            The GenZ chapter of the Computer Society of Sri Lanka (CSSL) at the
+            University of Colombo School of Computing (UCSC)
+          </p>
+        </div>
+      </header>
+
+      <section class="activities-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>WHAT WE DO</h2>
+            <h3>We Just Do These</h3>
+          </div>
+
+          <div class="activities-grid">
+            <article class="activity-card">
+              <div class="card-image">
+                <img
+                  src="/images/competitions.jpg"
+                  alt="Competitions - Award ceremony"
+                />
+              </div>
+              <div class="card-content">
+                <h4>Competitions</h4>
+                <p>
+                  In motivating students to develop skills and clinch to greater
+                  heights and excel in the IT field. This gives them the
+                  opportunity to uncover and showcase their talents.
+                </p>
+              </div>
+            </article>
+
+            <article class="activity-card">
+              <div class="card-image">
+                <img
+                  src="/images/events.jpg"
+                  alt="Events and Activities - Group photo"
+                />
+              </div>
+              <div class="card-content">
+                <h4>Events and Activities</h4>
+                <p>
+                  Engaging in meaningful and interesting volunteering
+                  experiences being fun and fulfillment to life while paving a
+                  way for our members to explore their interests and passions.
+                </p>
+              </div>
+            </article>
+
+            <article class="activity-card">
+              <div class="card-image">
+                <img
+                  src="/images/member-development.jpg"
+                  alt="Member Development - Group celebration"
+                />
+              </div>
+              <div class="card-content">
+                <h4>Member Development</h4>
+                <p>
+                  The perfect platform for colleagues to engage in dynamic
+                  environments which emphasize co-creation and collaboration to
+                  develop their distinct and unique personalities and
+                  professionalism.
+                </p>
+              </div>
+            </article>
+
+            <article class="activity-card">
+              <div class="card-image">
+                <img
+                  src="/images/workshops.jpg"
+                  alt="Workshops - Seminar session"
+                />
+              </div>
+              <div class="card-content">
+                <h4>Workshops</h4>
+                <p>
+                  Comprehensive knowledge plays a major role on setting sights
+                  to the advancing technological world. Workshops help in
+                  boosting up the students to investigate and expand their
+                  scope.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter-section">
+        <div class="newsletter-content">
+          <h2>Subscribe to our newsletter</h2>
+          <p>to receive updates about future events</p>
+          <button class="subscribe-btn">Subscribe</button>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script>
+      fetch("/Navbar/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-container").innerHTML = data;
+        });
+
+      fetch("/Footer/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

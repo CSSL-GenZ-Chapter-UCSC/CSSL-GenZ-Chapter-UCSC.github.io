@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home-CSSL - Center for Study of Science and Literature</title>
+    <title>Home-CSSL - Computer Society of Sri Lanka</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../Navbar/navbar.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -19,71 +20,7 @@
     />
   </head>
   <body>
-    <header class="navbar">
-      <div class="container">
-        <div class="navbar-content">
-          <div class="logo">
-            <a href="index.html">
-              <img src="../assets/logo.png" alt="CSSL Logo" />
-            </a>
-          </div>
-
-          <nav class="nav-menu">
-            <ul class="nav-links">
-              <li><a href="#" class="active">HOME</a></li>
-              <li class="dropdown">
-                <a href="#">ABOUT US <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Our Mission</a></li>
-                  <li><a href="#">Our Team</a></li>
-                  <li><a href="#">History</a></li>
-                </ul>
-              </li>
-              <li><a href="#">WHAT WE DO</a></li>
-              <li class="dropdown">
-                <a href="#">EVENTS <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="../Events/kaveesha/upComingEvents.html">Upcoming Events</a>
-                  </li>
-                  <li><a href="#">Past Events</a></li>
-                  <li><a href="#">Workshops</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#">PEOPLE <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Leadership</a></li>
-                  <li><a href="#">Faculty</a></li>
-                  <li><a href="#">Staff</a></li>
-                </ul>
-              </li>
-              <li><a href="../Contact Us/contactUs.html">CONTACT US</a></li>
-            </ul>
-          </nav>
-
-          <div class="social-icons">
-            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-            <a href="#" aria-label="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="#" aria-label="Facebook"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a href="#" aria-label="LinkedIn"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-          </div>
-
-          <div class="mobile-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </div>
-      </div>
-    </header>
-
+    <div id="navbar-container"></div>
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="container">
@@ -112,17 +49,18 @@
           </div>
           <div class="about-text">
             <h3 class="section-subtitle">ABOUT THE CHAPTER</h3>
-            <h2 class="section-title">Transforming bytes into brilliance</h2>
+            <h2 class="section-title">Elevating Ideas into Legacy, at UCSC</h2>
             <p class="section-description">
-              Established in 2021 by the Faculty of Computing, we take immense
-              pride in being the first-ever Student Chapter of the Computer
-              Society of Sri Lanka, paving the way for a new era of IT
-              professionalism and development among our undergraduates. Our
-              chapter is a dynamic platform for aspiring IT professionals,
-              providing unparalleled personal and professional growth
-              opportunities. With a commitment to fostering knowledge, skills,
-              and industry connections, the CSSL GenZ Chapter of KDU has become
-              a catalyst for excellence in information technology.
+              Established in 2025 by the University of Colombo School of
+              Computing (UCSC), The CSSL GenZ Chapter of UCSC stands as an
+              initiative dedicated to empowering the next generation of IT
+              professionals. As a proud extension of the Computer Society of Sri
+              Lanka (CSSL), our chapter serves as a place for innovation and
+              continuous learning. We aim to bridge the gap between academia and
+              industry, offering our members unique opportunities to enhance
+              their expertise, leadership skills, and professional networks.
+              With a clear vision for the future, we are committed to driving an
+              impactful change in the field of computing.
             </p>
             <a href="#" class="about-btn"
               >Explore More <i class="fas fa-arrow-right"></i
@@ -192,70 +130,20 @@
         </div>
       </div>
     </section>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <img src="../assets/logo.png" alt="CSSL Logo" class="footer-logo" />
-            <p class="footer-tagline">
-              We are the National Association for IT Professionals in Sri Lanka
-            </p>
-            <div class="footer-social">
-              <p>Follow us on:</p>
-              <div class="social-links">
-                <a href="#" aria-label="Email"
-                  ><i class="fas fa-envelope"></i
-                ></a>
-                <a href="#" aria-label="Instagram"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-                <a href="#" aria-label="Facebook"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a href="#" aria-label="LinkedIn"
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="footer-links">
-            <h3>USEFUL LINKS</h3>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Accreditation</a></li>
-              <li><a href="#">Membership</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-newsletter">
-            <h3>NEWSLETTER</h3>
-            <p>
-              Subscribe to our newsletter to receive latest updates from CSSL!
-            </p>
-            <form class="newsletter-form">
-              <input type="text" placeholder="Enter your name" required />
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                required
-              />
-              <button type="submit" class="subscribe-btn">Subscribe Now</button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <p>© 2025 CSSL GenZ Chapter UCSC</p>
-        </div>
-      </div>
-    </footer>
-
+    <div id="footer-container"></div>
     <script>
+      fetch("/Navbar/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-container").innerHTML = data;
+        });
+
+      fetch("/Footer/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+
       // Mobile menu toggle
       document
         .querySelector(".mobile-toggle")

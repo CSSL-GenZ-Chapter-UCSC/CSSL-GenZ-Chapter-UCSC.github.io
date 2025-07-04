@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Event</title>
+
+    <link rel="stylesheet" href="colloquium.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+    <main>
+      <section>
+        <div id="symposium">
+          <h1>CSSL Research Colloquium 2025</h1>
+          <!--for first section symposium-->
+          <p>Research Colloquium 2025 of Computer Society of Sri Lanka</p>
+        </div>
+      </section>
+      <section>
+        <div class="paragraph">
+          <div class="horizontal-flex">
+            <!--This div is for vertical bar + h2 tag 3RD STUDENT SYMPOSIUM-->
+            <div id="line"></div>
+            <!--for second section vertical line-->
+            <h2>CSSL Research Colloquium 2025</h2>
+          </div>
+          <div id="heading-with-icons">
+            <h1>CSSL Research Colloquium 2025</h1>
+            <div class="icon-text">
+              <img src="../../assets/calender.png" alt="calendar" />
+              <span>7 Mon, July</span>
+
+              <img src="../../assets/clock.png" alt="clock" />
+              <span>09.30am Onwards</span>
+
+              <img src="../../assets/maps.png" alt="map" />
+              <span
+                >Govt. Media Unit, Dept. of Government Information, Colombo
+                05</span
+              >
+            </div>
+            <!--for icon-text div end-->
+          </div>
+          <!--for heading-with-icons div end-->
+          <div id="para-lines">
+            <p>
+              The CSSL Research Colloquium 2025, organized by the Computer
+              Society of Sri Lanka, is a nationally recognized platform that
+              celebrates innovative research and development in the field of
+              computing. Held as a key segment of the National IT Conference
+              (NITC), the colloquium provides students the opportunity to
+              present their original ideas, prototypes, and research to a panel
+              of academic and industry experts.
+            </p>
+
+            <p>
+              This year, five outstanding undergraduate projects have been
+              selected from the University of Colombo School of Computing (UCSC)
+              to represent the institution at this prestigious event.
+            </p>
+
+            <p>
+              At the colloquium, the selected students will pitch their research
+              or product ideas to a professional audience, gain valuable
+              feedback, and stand a chance to be recognized at the national
+              level. The platform also serves as a unique networking
+              opportunity, connecting young innovators with leaders from
+              academia, industry, and government.
+            </p>
+            <p>
+              We are proud to support our students as they take their ideas
+              beyond the classroom, showcasing not only their technical
+              capabilities but also the innovation that defines UCSC.
+            </p>
+          </div>
+          <!--for para div end-->
+        </div>
+        <!--for paragraph div end-->
+      </section>
+
+      <section>
+        <div id="images-section"></div>
+        <!--for images + view Album button div tag end-->
+      </section>
+    </main>
+    <div id="footer-container"></div>
+    <script>
+      fetch("/Navbar/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-container").innerHTML = data;
+          console.log(data);
+        });
+
+      fetch("/Footer/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+
+      // Year selector functionality
+      const yearButtons = document.querySelectorAll(".year-button");
+      yearButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          yearButtons.forEach((btn) => btn.classList.remove("active"));
+          this.classList.add("active");
+          // Here you would typically add logic to switch the displayed team members
+        });
+      });
+
+      let images = document.getElementsByClassName("interactive-image");
+
+      for (let i = 0; i < images.length; i++) {
+        images[i].addEventListener("mouseover", function () {
+          images[i].style.border = "4px solid blue"; // or any style you want
+          images[i].style.borderRadius = "15px"; // makes the border curve
+        });
+
+        images[i].addEventListener("mouseout", function () {
+          images[i].style.border = "none"; // remove border when mouse leaves
+        });
+      }
+    </script>
+  </body>
+</html>

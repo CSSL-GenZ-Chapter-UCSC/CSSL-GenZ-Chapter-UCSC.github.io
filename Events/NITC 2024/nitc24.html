@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Event</title>
+
+    <link rel="stylesheet" href="nitc24.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+    <main>
+      <section>
+        <div id="symposium">
+          <h1>NITC - 2024</h1>
+          <!--for first section symposium-->
+          <p>National IT Conference - 2024</p>
+        </div>
+      </section>
+      <section>
+        <div class="paragraph">
+          <div class="horizontal-flex">
+            <!--This div is for vertical bar + h2 tag 3RD STUDENT SYMPOSIUM-->
+            <div id="line"></div>
+            <!--for second section vertical line-->
+            <h2>NITC - 2024</h2>
+          </div>
+          <div id="heading-with-icons">
+            <h1>National IT Conference - 2024</h1>
+            <div class="icon-text">
+              <img src="../../assets/calender.png" alt="calendar" />
+              <span>2024</span>
+
+              <img src="../../assets/clock.png" alt="clock" />
+              <span>/--/</span>
+
+              <img src="../../assets/maps.png" alt="map" />
+              <span>Shangri La Hotel - Colombo</span>
+            </div>
+            <!--for icon-text div end-->
+          </div>
+          <!--for heading-with-icons div end-->
+          <div id="para-lines">
+            <p>
+              The 42nd National Information Technology Conference (NITC 2024),
+              organized by CSSL, was a landmark event themed “Catalyzing the
+              Progressive Future Towards Society 5.0.” It brought together
+              experts from technology, policy, and academia to explore how
+              digital innovation can drive human centered, inclusive, and
+              sustainable development.
+            </p>
+
+            <p>
+              CSSL President Dr. Ajantha Atukorale proposed key initiatives,
+              including the formation of a Chartered ICT Professional Entity and
+              recognizing ICT as a standalone industry to strengthen Sri Lanka's
+              digital future. The government's establishment of the Ministry of
+              Digital Economy was also highlighted as a major step forward.
+            </p>
+
+            <p>
+              The conference featured vital discussions on AI ethics,
+              cybersecurity, smart cities, and digital entrepreneurship,
+              reaffirming Sri Lanka's potential to lead in the regional digital
+              space.
+            </p>
+            <p>
+              NITC 2024 continues to inspire future ready ICT professionals and
+              reflects CSSL's ongoing commitment to shaping Society 5.0.
+            </p>
+          </div>
+          <!--for para div end-->
+        </div>
+        <!--for paragraph div end-->
+      </section>
+
+      <section>
+        <div id="images-section">
+          <!--for images + view Album button div tag begin-->
+          <img
+            id="nitc2024"
+            class="interactive-image"
+            src="../../assets/nitc-24-1.jpg"
+            alt="hackpthon"
+          />
+          <img
+            id="img1"
+            class="interactive-image"
+            src="../../assets/nitc-24-2.jpg"
+            alt="image1"
+          />
+          <img
+            id="img2"
+            class="interactive-image"
+            src="../../assets/nitc-24-3.jpg"
+            alt="image2"
+          />
+          <!--for images of events-->
+          <img
+            id="img3"
+            class="interactive-image"
+            src="../../assets/nitc-24-4.jpg"
+            alt="image3"
+          />
+        </div>
+        <!--for images + view Album button div tag end-->
+      </section>
+    </main>
+    <div id="footer-container"></div>
+    <script>
+      fetch("/Navbar/navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("navbar-container").innerHTML = data;
+          console.log(data);
+        });
+
+      fetch("/Footer/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+
+      // Year selector functionality
+      const yearButtons = document.querySelectorAll(".year-button");
+      yearButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          yearButtons.forEach((btn) => btn.classList.remove("active"));
+          this.classList.add("active");
+          // Here you would typically add logic to switch the displayed team members
+        });
+      });
+
+      let images = document.getElementsByClassName("interactive-image");
+
+      for (let i = 0; i < images.length; i++) {
+        images[i].addEventListener("mouseover", function () {
+          images[i].style.border = "4px solid blue"; // or any style you want
+          images[i].style.borderRadius = "15px"; // makes the border curve
+        });
+
+        images[i].addEventListener("mouseout", function () {
+          images[i].style.border = "none"; // remove border when mouse leaves
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -154,10 +154,11 @@ body {
 
 /* About Page Header Styles */
 .about-header {
-    background-color: #004ce5;
+    background: linear-gradient(135deg, #013eb7 0%, #0955ec 100%);
     color: white;
     padding: 60px 0;
     text-align: center;
+    
 }
 
 .about-header h1 {

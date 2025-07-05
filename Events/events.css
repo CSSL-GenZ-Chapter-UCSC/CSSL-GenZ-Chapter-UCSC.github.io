@@ -48,7 +48,7 @@ body {
 }
 
 .events-hero {
-  background-color: #0040a8;
+  background: linear-gradient(135deg, #013eb7 0%, #0955ec 100%);
   color: white;
   padding: 50px 0;
   text-align: center;
@@ -67,12 +67,9 @@ body {
 }
 
 .events-listing-section {
-  padding: 50px 0;
+  padding: 50px 40px;
 }
 
-#past-events.events-listing-section {
-  background-color: #f9f9fb;
-}
 
 .section-subtitle.blue-bar {
   display: flex;
@@ -118,6 +115,8 @@ body {
   margin-bottom: 50px;
   border-radius: 8px;
   overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
 .month-title {

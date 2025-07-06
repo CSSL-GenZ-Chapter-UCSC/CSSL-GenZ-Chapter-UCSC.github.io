@@ -89,12 +89,16 @@
 
                 <div class="contact-option">
                   <i class="fas fa-envelope"></i>
-                  <a href="#">Shoot us an email</a>
+                  <a href="mailto:cssl.genz@stu.ucsc.cmb.ac.lk"
+                    >Shoot us an email</a
+                  >
                 </div>
 
                 <div class="contact-option">
                   <i class="fab fa-facebook-f"></i>
-                  <a href="#">Message us on Facebook</a>
+                  <a href="https://www.facebook.com/share/1F5rcLY4fd/"
+                    >Message us on Facebook</a
+                  >
                 </div>
               </div>
 
@@ -119,7 +123,7 @@
 
                 <div class="contact-address">
                   <i class="fas fa-map-marker-alt"></i>
-                  <a href="#"
+                  <a href="https://share.google/x9AlmDqRagjMrpblW"
                     >UCSC Building Complex, 35 Reid Ave, Colombo 00700</a
                   >
                 </div>
@@ -130,29 +134,6 @@
       </div>
     </section>
     <div id="footer-container"></div>
-    <script>
-      fetch("/Navbar/navbar.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("navbar-container").innerHTML = data;
-          console.log(data);
-        });
-
-      fetch("/Footer/footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer-container").innerHTML = data;
-        });
-
-      // Year selector functionality
-      const yearButtons = document.querySelectorAll(".year-button");
-      yearButtons.forEach((button) => {
-        button.addEventListener("click", function () {
-          yearButtons.forEach((btn) => btn.classList.remove("active"));
-          this.classList.add("active");
-          // Here you would typically add logic to switch the displayed team members
-        });
-      });
-    </script>
+    <script src="contactUs.js"></script>
   </body>
 </html>

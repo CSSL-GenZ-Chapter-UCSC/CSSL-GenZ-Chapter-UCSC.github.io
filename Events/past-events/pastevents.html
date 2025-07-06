@@ -107,7 +107,27 @@
                 .then((response) => response.text())
                 .then((data) => {
                     document.getElementById("navbar-container").innerHTML = data
-                    console.log(data)
+
+                    // Mobile menu toggle - moved inside navbar fetch callback
+                    document
+                        .querySelector(".mobile-toggle")
+                        .addEventListener("click", function () {
+                            document
+                                .querySelector(".nav-menu")
+                                .classList.toggle("active")
+                            this.classList.toggle("active")
+                        })
+
+                    // Add event listeners for dropdown menus on mobile
+                    const dropdowns = document.querySelectorAll(".dropdown")
+                    dropdowns.forEach((dropdown) => {
+                        dropdown.addEventListener("click", function (e) {
+                            if (window.innerWidth <= 768) {
+                                e.preventDefault()
+                                this.classList.toggle("show-dropdown")
+                            }
+                        })
+                    })
                 })
 
             fetch("/footer/footer.html")

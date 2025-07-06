@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UpComingEvents - CSSL - Computer Society of Sri Lanka</title>
+    <title>Upcoming Events - CSSL - Computer Society of Sri Lanka</title>
 
-    <link rel="stylesheet" href="../../Home/style.css" />
+    <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="./events.css" />
-    <link rel="stylesheet" href="/Navbar/navbar.css" />
-    <link rel="stylesheet" href="/Footer/footer.css" />
+    <link rel="stylesheet" href="/navbar/navbar.css" />
+    <link rel="stylesheet" href="/footer/footer.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -55,7 +55,7 @@
                 />
                 <p>19 Wed, March</p>
               </div>
-              <a href="./Launch Event/launchevent.html" class="about-btn"
+              <a href="./launch-event/launchevent.html" class="about-btn"
                 >See More</a
               >
             </div>
@@ -75,7 +75,7 @@
                   <i class="fas fa-calendar-alt"></i> 07 Mon, July
                 </p>
                 <a
-                  href="./CSSL Research Colloquium/colloquium.html"
+                  href="./cssl-research-colloquium/colloquium.html"
                   class="about-btn"
                   >View more ></a
                 >
@@ -92,7 +92,7 @@
                 <p class="event-date">
                   <i class="fas fa-calendar-alt"></i> 31 Mon, March
                 </p>
-                <a href="./Launch Event/launchevent.html" class="about-btn"
+                <a href="./launch-event/launchevent.html" class="about-btn"
                   >View more ></a
                 >
               </div>
@@ -126,7 +126,7 @@
               <h2 class="section-title" id="right">Past Events</h2>
             </div>
             <a
-              href="Past Events/pastevents.html"
+              href="past-events/pastevents.html"
               class="arrow-link"
               aria-label="Previous Past Events"
               ><i class="fas fa-arrow-left"></i
@@ -145,7 +145,7 @@
                 <p class="event-date">
                   <i class="fas fa-calendar-alt"></i> 2024
                 </p>
-                <a href="./NITC 2024/nitc24.html" class="about-btn">View more ></a>
+                <a href="./nitc-2024/nitc24.html" class="about-btn">View more ></a>
               </div>
             </div>
             <!-- Meetup Card (Past) -->
@@ -160,7 +160,7 @@
                 <p class="event-date">
                   <i class="fas fa-calendar-alt"></i> May, 2025
                 </p>
-                <a href="./Meetup/meetup.html" class="about-btn">View more ></a>
+                <a href="./meetup/meetup.html" class="about-btn">View more ></a>
               </div>
             </div>
             </div>
@@ -180,13 +180,13 @@
     </main>
     <div id="footer-container"></div>
     <script>
-      fetch("/Navbar/navbar.html")
+      fetch("/navbar/navbar.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("navbar-container").innerHTML = data;
         });
 
-      fetch("/Footer/footer.html")
+      fetch("/footer/footer.html")
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("footer-container").innerHTML = data;

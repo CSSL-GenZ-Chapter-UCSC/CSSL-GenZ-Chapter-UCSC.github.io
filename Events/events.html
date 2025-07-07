@@ -102,8 +102,8 @@
           <div class="event-cards-container">
             <div class="event-card">
               <img
-                src="/assets/event.jpg"
-                alt="Student Symposium May"
+                src="/assets/nitc25.png"
+                alt="NITC 2025"
                 class="event-thumbnail"
               />
               <div class="event-card-content">
@@ -111,7 +111,7 @@
                 <p class="event-date">
                   <i class="fas fa-calendar-alt"></i> 2025
                 </p>
-                <a href="#" class="about-btn">View more ></a>
+                <a href="#" class="about-btn disabled">View more ></a>
               </div>
             </div>
           </div>
@@ -120,18 +120,8 @@
 
       <section class="events-listing-section" id="past-events">
         <div class="container">
-          <div class="past-events-header" id="right">
-            <div class="past-events-title-group">
-              <h3 class="section-subtitle blue-bar" id="right">PAST</h3>
-              <h2 class="section-title" id="right">Past Events</h2>
-            </div>
-            <a
-              href="past-events/pastevents.html"
-              class="arrow-link"
-              aria-label="Previous Past Events"
-              ><i class="fas fa-arrow-left"></i
-            ></a>
-          </div>
+          <h3 class="section-subtitle blue-bar">PAST</h3>
+          <h2 class="section-title">Past Events</h2>
           <div class="event-cards-container">
             <!-- NITC Card (Past) -->
             <div class="event-card">
@@ -184,6 +174,38 @@
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("navbar-container").innerHTML = data;
+          
+          // Mobile menu toggle - moved inside navbar fetch callback
+          document
+            .querySelector(".mobile-toggle")
+            .addEventListener("click", function () {
+              document.querySelector(".nav-menu").classList.toggle("active");
+              this.classList.toggle("active");
+            });
+
+          // Add event listeners for dropdown menus on mobile
+          const dropdowns = document.querySelectorAll(".dropdown");
+          dropdowns.forEach((dropdown) => {
+            dropdown.addEventListener("click", function (e) {
+              if (window.innerWidth <= 768) {
+                // Check if the click is on the dropdown toggle itself, not a link inside
+                if (
+                  e.target === this ||
+                  (e.target.parentElement === this && e.target.tagName === "A")
+                ) {
+                  const dropdownMenu = this.querySelector(".dropdown-menu");
+                  if (dropdownMenu) {
+                    // Prevent default only if it's the main dropdown link
+                    if (e.target.tagName === "A" && e.target.href.endsWith("#")) {
+                      e.preventDefault();
+                    }
+                    dropdownMenu.classList.toggle("show-dropdown"); // Use a class to control visibility
+                    this.classList.toggle("show-dropdown"); // For styling the parent
+                  }
+                }
+              }
+            });
+          });
         });
 
       fetch("/footer/footer.html")
@@ -191,38 +213,6 @@
         .then((data) => {
           document.getElementById("footer-container").innerHTML = data;
         });
-
-      // Mobile menu toggle
-      document
-        .querySelector(".mobile-toggle")
-        .addEventListener("click", function () {
-          document.querySelector(".nav-menu").classList.toggle("active");
-          this.classList.toggle("active");
-        });
-
-      // Add event listeners for dropdown menus on mobile
-      const dropdowns = document.querySelectorAll(".dropdown");
-      dropdowns.forEach((dropdown) => {
-        dropdown.addEventListener("click", function (e) {
-          if (window.innerWidth <= 768) {
-            // Check if the click is on the dropdown toggle itself, not a link inside
-            if (
-              e.target === this ||
-              (e.target.parentElement === this && e.target.tagName === "A")
-            ) {
-              const dropdownMenu = this.querySelector(".dropdown-menu");
-              if (dropdownMenu) {
-                // Prevent default only if it's the main dropdown link
-                if (e.target.tagName === "A" && e.target.href.endsWith("#")) {
-                  e.preventDefault();
-                }
-                dropdownMenu.classList.toggle("show-dropdown"); // Use a class to control visibility
-                this.classList.toggle("show-dropdown"); // For styling the parent
-              }
-            }
-          }
-        });
-      });
     </script>
   </body>
 </html>

@@ -196,11 +196,9 @@ body {
 }
 
 .event-image {
-    flex: 0.8;
-    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    max-width: 450px;
+    width: 100%;
 }
 
 .event-image img {

@@ -959,9 +959,15 @@ body {
     position: relative;
 }
 
+.events-main-content {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+
 .events-header {
-    text-align: center;
-    margin-bottom: 60px;
+    flex: 1;
+    text-align: left;
 }
 
 .events-subtitle {
@@ -971,6 +977,20 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.events-subtitle::after {
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    width: 5px;
+    height: 25px;
+    background-color: white;
+    transform: translateY(-50%);
 }
 
 .events-title {
@@ -979,21 +999,22 @@ body {
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
+    margin-left: 20px;
 }
 
 .events-description {
     color: rgba(255, 255, 255, 0.8);
     font-size: 16px;
-    max-width: 600px;
-    margin: 0 auto;
     line-height: 1.6;
+    margin-bottom: 30px;
+    margin-left: 20px;
 }
 
 .events-container {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     height: 500px;
-    margin-bottom: 50px;
+    flex: 1.5;
 }
 
 .event-card {
@@ -1006,11 +1027,11 @@ body {
 }
 
 .event-card:not(.active) {
-    flex: 0.8;
+    flex: 0.6;
 }
 
 .event-card.active {
-    flex: 2;
+    flex: 1.8;
 }
 
 .event-image {
@@ -1152,10 +1173,6 @@ body {
     transform: translateX(5px);
 }
 
-.events-footer {
-    text-align: center;
-}
-
 .events-main-btn {
     display: inline-flex;
     align-items: center;
@@ -1169,6 +1186,7 @@ body {
     border-radius: 30px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
 }
 
 .events-main-btn:hover {
@@ -1187,12 +1205,20 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    .events-main-content {
+        gap: 60px;
+    }
+
     .events-container {
         height: 450px;
     }
 
     .events-title {
         font-size: 36px;
+    }
+
+    .events-subtitle::after {
+        height: 20px;
     }
 
     .event-content {
@@ -1211,8 +1237,39 @@ body {
         padding: 60px 0;
     }
 
+    .events-main-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .events-header {
+        text-align: center;
+        order: 1;
+    }
+
+    .events-container {
+        order: 2;
+    }
+
     .events-title {
         font-size: 28px;
+        margin-left: 0;
+    }
+
+    .events-subtitle {
+        margin-left: 0;
+    }
+
+    .events-subtitle::after {
+        display: none;
+    }
+
+    .events-description {
+        margin-left: 0;
+    }
+
+    .events-main-btn {
+        margin-left: 0;
     }
 
     .events-container {
@@ -1260,6 +1317,10 @@ body {
 @media (max-width: 576px) {
     .events-section {
         padding: 50px 0;
+    }
+
+    .events-main-content {
+        gap: 30px;
     }
 
     .events-title {

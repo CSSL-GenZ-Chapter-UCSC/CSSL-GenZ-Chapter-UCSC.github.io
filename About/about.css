@@ -158,7 +158,6 @@ body {
     color: white;
     padding: 60px 0;
     text-align: center;
-    
 }
 
 .about-header h1 {
@@ -186,17 +185,40 @@ body {
     align-items: center;
 }
 
-/* .about-image {
+/* Image container styles */
+.image-container {
     flex: 1;
     max-width: 450px;
+    position: relative;
+    height: 400px;
+    margin-right: 20px;
 }
 
-.about-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-} */
+.image-container img {
+    width: 280px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:first-child {
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.image-container img:last-child {
+    top: 60px;
+    left: 150px;
+    z-index: 1;
+}
+
+.image-container img:hover {
+    transform: translateY(-5px);
+}
 
 .about-text {
     flex: 1.5;
@@ -551,14 +573,35 @@ body {
         gap: 30px;
     }
 
-    /* .about-image {
+    .image-container {
+        flex: none;
         max-width: 100%;
-    } */
+        width: 100%;
+        height: 280px;
+        margin-right: 0;
+        margin-bottom: 30px;
+        display: block;
+    }
+
+    .image-container img {
+        width: 60%;
+        height: 200px;
+    }
+
+    .image-container img:first-child {
+        top: 0;
+        left: 0;
+    }
+
+    .image-container img:last-child {
+        top: 40px;
+        left: 40%;
+    }
 
     .section-title {
         font-size: 1.6rem;
     }
-    
+
     .annual-meeting-title {
         font-size: 1.5rem;
     }
@@ -612,8 +655,29 @@ body {
     .about-text p {
         font-size: 0.95rem;
     }
-    
+
     .annual-meeting-title {
         font-size: 1.3rem;
+    }
+
+    .image-container {
+        flex: none;
+        height: 240px;
+        margin-bottom: 25px;
+    }
+
+    .image-container img {
+        width: 65%;
+        height: 180px;
+    }
+
+    .image-container img:first-child {
+        top: 0;
+        left: 0;
+    }
+
+    .image-container img:last-child {
+        top: 30px;
+        left: 35%;
     }
 }

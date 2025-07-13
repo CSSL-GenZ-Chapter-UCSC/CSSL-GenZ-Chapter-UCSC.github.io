@@ -184,7 +184,7 @@ body {
     gap: 40px;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
 }
 
 .event-text {
@@ -292,6 +292,98 @@ body {
 
 .register-btn:hover i {
     transform: none;
+}
+
+/* Event Image Collage for Student Symposium */
+.event-image-collage {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.main-image {
+    flex: 2;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px 0 0 12px;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.side-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+}
+
+.side-image {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.side-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.side-image:first-child {
+    border-radius: 8px 8px 8px 8px;
+}
+
+.side-image:last-child {
+    border-radius: 8px 8px 8px 8px;
+}
+
+/* Responsive adjustments for collage */
+@media (max-width: 768px) {
+    .event-image-collage {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+    }
+
+    .main-image {
+        height: 250px;
+        border-radius: 12px;
+    }
+
+    .side-images {
+        flex-direction: row;
+        height: 150px;
+        gap: 10px;
+    }
+
+    .side-image {
+        flex: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .event-image-collage {
+        height: auto;
+    }
+
+    .main-image {
+        height: 200px;
+    }
+
+    .side-images {
+        height: 120px;
+    }
 }
 
 /* Footer Styles */

@@ -772,6 +772,34 @@ body {
     border-top: 1px solid #eaeef5;
 }
 
+/* Disabled states and coming soon text */
+.newsletter-form input:disabled {
+    background-color: #f5f5f5;
+    color: #999;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.newsletter-form .subscribe-btn:disabled {
+    background-color: #ccc;
+    color: #999;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.newsletter-form .subscribe-btn:disabled:hover {
+    background-color: #ccc;
+    transform: none;
+}
+
+.coming-soon-text {
+    color: #666;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 15px;
+    text-align: center;
+}
+
 .footer-content {
     display: flex;
     flex-wrap: wrap;

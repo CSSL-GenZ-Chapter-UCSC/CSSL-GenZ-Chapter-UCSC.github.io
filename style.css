@@ -1083,44 +1083,58 @@ body {
     );
     transform: translateY(0);
     transition: all 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .event-card:not(.active) .event-content {
-    transform: translateY(50px);
+    padding: 20px 40px;
+    justify-content: center;
 }
 
 .event-card:not(.active) .event-content .event-desc,
 .event-card:not(.active) .event-content .event-btn {
     opacity: 0;
+    display: none;
     transition: opacity 0.3s ease;
 }
 
 .event-card.active .event-content .event-desc,
 .event-card.active .event-content .event-btn {
     opacity: 1;
-    transition: opacity 0.6s ease 0.3s;
+    display: block;
+    transition: opacity 0.4s ease 0.6s;
+}
+
+.event-card:not(.active) .event-title {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+}
+
+.event-card.active .event-title {
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+    transform: rotate(0deg);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+}
+
+.event-card.transitioning .event-title {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.event-card.transitioning.active .event-title {
+    opacity: 1;
+    transition: opacity 0.3s ease 0.4s;
 }
 
 .event-number {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1;
-    writing-mode: vertical-lr;
-    text-orientation: mixed;
-    position: absolute;
-    top: 40px;
-    right: 40px;
-}
-
-.event-card:not(.active) .event-number {
-    writing-mode: horizontal-tb;
-    text-orientation: initial;
-    position: relative;
-    top: auto;
-    right: auto;
-    font-size: 24px;
+    display: none;
 }
 
 .event-title {
@@ -1129,11 +1143,16 @@ body {
     font-weight: 700;
     margin-bottom: 15px;
     line-height: 1.2;
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+    transform: rotate(0deg);
+    opacity: 1;
 }
 
 .event-card:not(.active) .event-title {
     font-size: 18px;
     margin-bottom: 10px;
+    margin-top: -10px;
 }
 
 .event-desc {
@@ -1141,6 +1160,8 @@ body {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 25px;
+    opacity: 1;
+    display: block;
 }
 
 .event-btn {
@@ -1157,6 +1178,7 @@ body {
     border-radius: 25px;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    opacity: 1;
 }
 
 .event-btn:hover {
@@ -1225,10 +1247,36 @@ body {
         padding: 30px;
     }
 
-    .event-number {
-        font-size: 40px;
-        top: 30px;
-        right: 30px;
+    .event-card:not(.active) .event-title {
+        writing-mode: horizontal-tb !important;
+        text-orientation: initial !important;
+        transform: none !important;
+        opacity: 1 !important;
+        transition: none !important;
+    }
+
+    .event-card.active .event-title {
+        writing-mode: horizontal-tb !important;
+        text-orientation: initial !important;
+        transform: none !important;
+        opacity: 1 !important;
+        transition: none !important;
+    }
+
+    .event-card:not(.active) .event-content .event-desc {
+        opacity: 1 !important;
+        display: block !important;
+    }
+
+    .event-card:not(.active) .event-content .event-btn {
+        opacity: 0 !important;
+        display: none !important;
+    }
+
+    .event-card.transitioning .event-title,
+    .event-card.transitioning.active .event-title {
+        opacity: 1 !important;
+        transition: none !important;
     }
 }
 
@@ -1291,26 +1339,34 @@ body {
         padding: 25px;
     }
 
-    .event-number {
-        font-size: 36px;
-        top: 25px;
-        right: 25px;
-    }
-
-    .event-card:not(.active) .event-number {
-        font-size: 20px;
-    }
-
     .event-title {
         font-size: 24px;
     }
 
     .event-card:not(.active) .event-title {
         font-size: 16px;
+        writing-mode: horizontal-tb !important;
+        text-orientation: initial !important;
+        transform: none !important;
+        opacity: 1 !important;
+        transition: none !important;
+    }
+
+    .event-card.active .event-title {
+        writing-mode: horizontal-tb !important;
+        text-orientation: initial !important;
+        transform: none !important;
+        opacity: 1 !important;
+        transition: none !important;
     }
 
     .event-desc {
         font-size: 14px;
+    }
+
+    .event-card:not(.active) .event-content .event-btn {
+        opacity: 0 !important;
+        display: none !important;
     }
 }
 
@@ -1343,22 +1399,25 @@ body {
         padding: 20px;
     }
 
-    .event-number {
-        font-size: 28px;
-        top: 20px;
-        right: 20px;
-    }
-
-    .event-card:not(.active) .event-number {
-        font-size: 18px;
-    }
-
     .event-title {
         font-size: 20px;
     }
 
     .event-card:not(.active) .event-title {
         font-size: 14px;
+        writing-mode: horizontal-tb !important;
+        text-orientation: initial !important;
+        transform: none !important;
+        opacity: 1 !important;
+        transition: none !important;
+    }
+
+    .event-card.active .event-title {
+        writing-mode: horizontal-tb !important;
+        text-orientation: initial !important;
+        transform: none !important;
+        opacity: 1 !important;
+        transition: none !important;
     }
 
     .event-desc {
@@ -1368,5 +1427,16 @@ body {
     .events-main-btn {
         font-size: 14px;
         padding: 12px 25px;
+    }
+
+    .event-card:not(.active) .event-content .event-btn {
+        opacity: 0 !important;
+        display: none !important;
+    }
+
+    .event-card.transitioning .event-title,
+    .event-card.transitioning.active .event-title {
+        opacity: 1 !important;
+        transition: none !important;
     }
 }

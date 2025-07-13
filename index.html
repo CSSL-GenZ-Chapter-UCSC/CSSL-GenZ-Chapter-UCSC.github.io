@@ -162,7 +162,6 @@
                                 <div class="event-overlay"></div>
                             </div>
                             <div class="event-content">
-                                <div class="event-number">03</div>
                                 <h3 class="event-title">NITC '24</h3>
                                 <p class="event-desc">
                                     Catalyzing the Progressive Future Towards
@@ -186,7 +185,6 @@
                                 <div class="event-overlay"></div>
                             </div>
                             <div class="event-content">
-                                <div class="event-number">02</div>
                                 <h3 class="event-title">Research Colloquium</h3>
                                 <p class="event-desc">
                                     A nationally recognized platform that
@@ -211,7 +209,6 @@
                                 <div class="event-overlay"></div>
                             </div>
                             <div class="event-content">
-                                <div class="event-number">01</div>
                                 <h3 class="event-title">Student Symposium</h3>
                                 <p class="event-desc">
                                     The 3rd Student Symposium of University of
@@ -282,11 +279,26 @@
 
             eventCards.forEach((card) => {
                 card.addEventListener("click", function () {
-                    // Remove active class from all cards
-                    eventCards.forEach((c) => c.classList.remove("active"))
+                    // Don't do anything if already active
+                    if (this.classList.contains("active")) return
 
-                    // Add active class to clicked card
-                    this.classList.add("active")
+                    // Add transition class for smooth animation
+                    eventCards.forEach((c) => {
+                        c.classList.add("transitioning")
+                        c.classList.remove("active")
+                    })
+
+                    // Add active class to clicked card with a delay for animation
+                    setTimeout(() => {
+                        this.classList.add("active")
+
+                        // Remove transition class after animation completes
+                        setTimeout(() => {
+                            eventCards.forEach((c) =>
+                                c.classList.remove("transitioning")
+                            )
+                        }, 600)
+                    }, 100)
                 })
             })
         </script>

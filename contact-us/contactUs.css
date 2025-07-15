@@ -390,6 +390,27 @@ body {
     transform: translateY(-2px);
 }
 
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .contact-form {
+        order: 1;
+    }
+    
+    .contact-info {
+        order: 2;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
 @media (max-width: 576px) {
     .social-icons {
         display: none;

@@ -1,108 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta name="description" content="People - CSSL GenZ" />
-        <meta name="keywords" content="CSSL, GenZ, People" />
-        
-        <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
-        <link rel="shortcut icon" href="/icons/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
-        <link rel="manifest" href="/icons/site.webmanifest" />
+    <meta name="description" content="People - CSSL GenZ" />
+    <meta name="keywords" content="CSSL, GenZ, People" />
 
-        <title>People - CSSL - Computer Society of Sri Lanka</title>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
-        <link rel="stylesheet" href="people.css" />
-        <link rel="stylesheet" href="/navbar/navbar.css" />
-        <link rel="stylesheet" href="/footer/footer.css" />
-    </head>
-    <body>
-        <!-- Navbar -->
-        <div id="navbar-container"></div>
-        <!-- Team Page Header -->
-        <section class="team-header">
-            <div class="container">
-                <h1>Our Team</h1>
-                <p>
-                    The GenZ chapter of the Computer Society of Sri Lanka (CSSL)
-                    of the University of Colombo School of Computing (UCSC)
-                </p>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/icons/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/icons/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/icons/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/icons/site.webmanifest" />
+
+    <title>People - CSSL - Computer Society of Sri Lanka</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="people.css" />
+    <link rel="stylesheet" href="/navbar/navbar.css" />
+    <link rel="stylesheet" href="/footer/footer.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+    <!-- Team Page Header -->
+    <section class="team-header">
+      <div class="container">
+        <h1>Our Team</h1>
+        <p>
+          The GenZ chapter of the Computer Society of Sri Lanka (CSSL) of the
+          University of Colombo School of Computing (UCSC)
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="team-content-section">
+      <div class="container">
+        <!-- Executive Committee Section -->
+        <div class="committee-section">
+          <h2>EXECUTIVE COMMITTEE</h2>
+          <h3 class="committee-title">
+            Leading with vision, building legacy at UCSC
+          </h3>
+
+          <!-- Top Executive Committee Image -->
+          <img
+            src="../assets/excom_top.png"
+            alt="Executive Committee Members - Top Section"
+            style="
+              width: 100vw;
+              height: auto;
+              margin-left: calc(-50vw + 50%);
+              margin-bottom: 30px;
+            "
+          />
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="stats-section">
+          <div class="stats-container">
+            <div class="stat-item">
+              <div class="stat-number" id="totalMembers">0</div>
+              <div class="stat-label">Total Members</div>
             </div>
-        </section>
-
-        <!-- Main Content -->
-        <section class="team-content-section">
-            <div class="container">
-                <!-- Executive Committee Section -->
-                <div class="committee-section">
-                    <h2>EXECUTIVE COMMITTEE</h2>
-                    <h3 class="committee-title">
-                        Leading with vision, building legacy at UCSC
-                    </h3>
-
-                    <!-- Top Executive Committee Image -->
-                    <img
-                        src="../assets/excom_top.jpg"
-                        alt="Executive Committee Members - Top Section"
-                        style="
-                            width: 100vw;
-                            height: auto;
-                            margin-left: calc(-50vw + 50%);
-                            margin-bottom: 30px;
-                        "
-                    />
-                </div>
-
-                <!-- Statistics Section -->
-                <div class="stats-section">
-                    <div class="stats-container">
-                        <div class="stat-item">
-                            <div class="stat-number" id="totalMembers">0</div>
-                            <div class="stat-label">Total Members</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" id="teamLeads">0</div>
-                            <div class="stat-label">Team Leads</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" id="excomMembers">0</div>
-                            <div class="stat-label">Ex-Com Members</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bottom Executive Committee Image -->
-                <div class="committee-section">
-                    <img
-                        src="../assets/excom_bottom.jpg"
-                        alt="Executive Committee Members - Bottom Section"
-                        style="
-                            width: 100vw;
-                            height: auto;
-                            margin-left: calc(-50vw + 50%);
-                            margin-top: 30px;
-                        "
-                    />
-                </div>
+            <div class="stat-item">
+              <div class="stat-number" id="teamLeads">0</div>
+              <div class="stat-label">Team Leads</div>
             </div>
-        </section>
+            <div class="stat-item">
+              <div class="stat-number" id="excomMembers">0</div>
+              <div class="stat-label">Ex-Com Members</div>
+            </div>
+          </div>
+        </div>
 
-        <!-- Footer -->
-        <div id="footer-container"></div>
-        <script src="people.js"></script>
-    </body>
+        <!-- Bottom Executive Committee Image -->
+        <div class="committee-section">
+          <img
+            src="../assets/excom_bottom.png"
+            alt="Executive Committee Members - Bottom Section"
+            style="
+              width: 100vw;
+              height: auto;
+              margin-left: calc(-50vw + 50%);
+              margin-top: 30px;
+            "
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <script src="people.js"></script>
+  </body>
 </html>

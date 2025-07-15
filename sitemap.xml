@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+  <url>
+    <loc>https://genz.ucsc.cmb.ac.lk/</loc>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://genz.ucsc.cmb.ac.lk/about/about.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://genz.ucsc.cmb.ac.lk/events/nitc-2024/nitc24.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://genz.ucsc.cmb.ac.lk/contact-us/contactUs.html</loc>
+  </url>
+
+  <url>
+    <loc>https://genz.ucsc.cmb.ac.lk/events/events.html</loc>
+  </url>
+
+  <url>
+    <loc>https://genz.ucsc.cmb.ac.lk/people/people.html</loc>
+  </url>
+
+  <url>
+    <loc>https://genz.ucsc.cmb.ac.lk/what-we-do/whatwedo.html</loc>
+  </url>
+
+</urlset>

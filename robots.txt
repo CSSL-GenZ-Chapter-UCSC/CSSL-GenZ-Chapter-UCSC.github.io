@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://genz.ucsc.cmb.ac.lk/sitemap.xml

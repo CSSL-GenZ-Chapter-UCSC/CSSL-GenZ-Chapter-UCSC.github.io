@@ -39,41 +39,7 @@
         <div class="container">
           <div class="timeline">
             <div class="timeline-start-dot"></div>
-            <div class="timeline-item left">
-              <div class="timeline-content">
-                <h3>Meetup</h3>
-                <p class="timeline-date">May, 2025</p>
-                <p>An evening of connection, games and laughter where new beginnings unfolded inspiring the GenZ way forward.</p>
-                <a href="./meetup/meetup.html" class="timeline-link">View more</a>
-              </div>
-            </div>
-
-            <div class="timeline-item right">
-              <div class="timeline-content">
-                <h3>CSSL Colloquium - 2025</h3>
-                <p class="timeline-date">07 Monday, July</p>
-                <p> A well deserved celebration of student innovation, where ideas met national recognition and inspired the future of tech.</p>
-                <a href="./cssl-colloquium/colloquium.html" class="timeline-link">View more</a>
-              </div>
-            </div>
-
-            <div class="timeline-item left">
-              <div class="timeline-content">
-                <h3>GenZ Launch</h3>
-                <p class="timeline-date">16 Wednesday, July</p>
-                <p>A new era begins at UCSC as we proudly unveil the launch of the CSSL GenZ chapter of UCSC</p>
-                <a href="./launch-event/launchevent.html" class="timeline-link">View more</a>
-              </div>
-            </div>
-
-            <div class="timeline-item right">
-              <div class="timeline-content">
-                <h3>NITC 2025</h3>
-                <p class="timeline-date">2025</p>
-                <p>National Information Technology Conference bringing together researchers, practitioners, and industry leaders to share insights and innovations.</p>
-                <a href="./nitc-2025/nitc25.html" class="timeline-link">View more</a>
-              </div>
-            </div>
+          
           </div>
         </div>
       </section>
@@ -258,5 +224,61 @@
           document.getElementById("footer-container").innerHTML = data;
         });
     </script>
+    <script>
+  // Event data as an array of objects
+  const timelineEvents = [
+     {
+      title: "GenZ Launch",
+      date: "16 Wednesday, July",
+      description:
+        "A new era begins at UCSC as we proudly unveil the launch of the CSSL GenZ chapter of UCSC",
+      link: "./launch-event/launchevent.html",
+      side: "left",
+    },
+    {
+      title: "NITC 2025",
+      date: "2025",
+      description:
+        "National Information Technology Conference bringing together researchers, practitioners, and industry leaders to share insights and innovations.",
+      link: "./nitc-2025/nitc25.html",
+      side: "right",
+    },
+    
+    // {
+    //   title: "CSSL Colloquium - 2025",
+    //   date: "07 Monday, July",
+    //   description:
+    //     "A well deserved celebration of student innovation, where ideas met national recognition and inspired the future of tech.",
+    //   link: "./cssl-colloquium/colloquium.html",
+    //   side: "left",
+    // },
+    // {
+    //   title: "Meetup",
+    //   date: "May, 2025",
+    //   description:
+    //     "An evening of connection, games and laughter where new beginnings unfolded inspiring the GenZ way forward.",
+    //   link: "./meetup/meetup.html",
+    //   side: "right",
+    // },
+  ];
+
+  // Render timeline events
+  const timelineContainer = document.querySelector(".timeline");
+
+  timelineEvents.forEach((event) => {
+    const item = document.createElement("div");
+    item.className = `timeline-item ${event.side}`;
+    item.innerHTML = `
+      <div class="timeline-content">
+        <h3>${event.title}</h3>
+        <p class="timeline-date">${event.date}</p>
+        <p>${event.description}</p>
+        <a href="${event.link}" class="timeline-link">View more</a>
+      </div>
+    `;
+    timelineContainer.appendChild(item);
+  });
+</script>
+
   </body>
 </html>
